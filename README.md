@@ -10,7 +10,7 @@
 ## Description
 
 This project is the frontend part of a university project focusing on a music player application named NekoNotes. I created it with my friend and worked on the Profile and Settings page as well as the Playbar, CreatorPanel, AddSong and Song component.
-You can find the backend [here](https://github.com/LeBulbasaur/NekoPlayer-Server)
+You can find the backend [here](https://github.com/LeBulbasaur/NekoPlayer-Server)!
 
 ## Technologies
 
