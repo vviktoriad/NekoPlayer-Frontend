@@ -1,0 +1,17 @@
+.profile {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: var(--background-color);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

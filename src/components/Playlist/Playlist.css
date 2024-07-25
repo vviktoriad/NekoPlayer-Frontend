@@ -1,0 +1,132 @@
+.playlists-back {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 20px;
+  width: 100%;
+  /* padding: 10px; */
+}
+
+.playlist-header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.add-playlist {
+  width: 25px;
+  height: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.add-playlist:hover {
+  transform: scale(1.1);
+}
+
+.playlist-header {
+  margin-bottom: 20px;
+  color: var(--input-border-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.playlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover_div_playlist {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  background-color: var(--background-color1);
+  border-radius: 10px;
+}
+
+.cover_div_playlist:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.remove_playlist_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  opacity: 1;
+  border-radius: 0 10px 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove_playlist_button svg {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 1px 1px;
+  fill: red;
+  transition: 0.3s;
+}
+
+.remove_playlist_button svg:hover {
+  transform: scale(1.1);
+}
+
+.playlist_cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.playlist-title {
+  color: var(--input-border-color);
+  margin-top: 8px;
+  /* Adjust spacing as needed */
+  font-weight: 200;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .playlist-header {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .playlist-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .cover_div_playlist {
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+  }
+
+  .playlist-title {
+    font-size: 0.8rem;
+    transition: 0.3s;
+  }
+
+  .add-playlist {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+  }
+}
