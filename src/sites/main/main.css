@@ -1,0 +1,258 @@
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: var(--background-color);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.titlebar {
+  /* background-color: var(--playbar-color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.titlebar h1 {
+  color: var(--input-border-color);
+}
+
+.titlebar img {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.row1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current-song-cover {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 20px;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.current-song-cover-container {
+  flex: 1;
+  background-color: var(--background-color1);
+  padding: 10px;
+  border-radius: 5px;
+  border-style: dashed;
+  border-color: var(--background-color);
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.current-song-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--background-color1);
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.current-song-details h4 {
+  text-align: center;
+  opacity: 0.5;
+}
+
+.current-song-title {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 10px;
+  color: var(--input-border-color);
+}
+
+.current-song-artist {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--input-border-color);
+}
+
+.creator-panel-main {
+  flex: 1;
+  margin: 10px;
+  margin-left: 20px;
+  max-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  gap: 0.25rem;
+  margin-right: 10px;
+  overflow-y: auto;
+}
+
+.creator-panel-main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.creator-panel-main::-webkit-scrollbar-thumb {
+  background: var(--input-border-color);
+  cursor: pointer;
+}
+
+.creator-panel-main::-webkit-scrollbar-track {
+  border: 0.5px dashed var(--heart-color);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-text {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  color: var(--input-border-color);
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  color: var(--label-color);
+}
+
+.dropdown-menu {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--drop-background);
+  border: 1px solid black;
+  z-index: 1;
+  width: 3rem;
+}
+
+.dropdown-menu.visible {
+  visibility: visible;
+}
+
+.dropdown-menu .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--label-color);
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .current-song-cover {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .current-song-cover-container {
+    margin-left: 0;
+  }
+
+  .current-song-details {
+    margin-left: 0;
+  }
+
+  .creator-panel-main {
+    margin-left: 0;
+  }
+
+  .titlebar h1 {
+    font-size: 1.5rem;
+  }
+
+  .titlebar img {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .current-song-cover {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .current-song-details {
+    padding: 5px;
+  }
+
+  .current-song-title {
+    font-size: 1.5rem;
+  }
+
+  .current-song-artist {
+    font-size: 0.8rem;
+  }
+
+  .titlebar {
+    height: 1rem;
+  }
+
+  .search-text {
+    display: none;
+  }
+
+  .menu-btn {
+    width: 2rem;
+  }
+
+  .dropdown-menu {
+    width: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .dropdown-menu .btn {
+    padding: 7px;
+    margin-right: 8px;
+  }
+
+  .creator-panel-main {
+    width: 85%;
+  }
+}

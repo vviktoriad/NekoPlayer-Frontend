@@ -1,0 +1,28 @@
+.button-theme {
+  background-color: var(--theme-button-background, #392467);
+  color: var(--theme-button-color, #ffffff);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-theme:hover {
+  opacity: 0.8;
+}
+
+/* Styles for dark theme */
+body.dark-theme {
+  --background-color: #392467;
+  --title-color: #ffd1e3;
+  --label-color: #ffd1e3;
+  --input-border-color: #ffd1e3;
+  --account-text-color: #ffd1e3;
+  --theme-button-background: #ffd1e3;
+  --theme-button-color: #392467;
+}
+
+.bi-sun-fill,
+.bi-moon-stars {
+  display: block;
+}

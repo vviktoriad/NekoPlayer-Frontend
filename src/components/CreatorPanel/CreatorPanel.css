@@ -1,0 +1,12 @@
+.creator-panel {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 0.25rem;
+    margin-right: 10px;
+    overflow-y: auto;
+}
+
+.creator-panel::-webkit-scrollbar {
+    display: none;
+}
